@@ -42,15 +42,16 @@ function sendQueryDiv(server,query,id_out)
 $(document).ready(function(){
 //    $('#out').append(JSON.stringify(window.location));
     console.log(window);
-    sendQueryDiv('https://falko.com.ua','username=admin7&password=admin900','out');
-/*    $.ajax({
+//    sendQueryDiv('https://falko.com.ua','username=admin7&password=admin900','out');
+    $.ajax({
         type: "POST",
         url: 'http://dev.naviwfm.com/dev/rest/login',
         data: {
             'username':'admin',
             'password':'admin900'
         },
-        dataType:'text',
+        dataType:'jsonp',
+        timeout:5000,
         success:function(param){
 //               console.log(param);
             $('#out').append(param);
@@ -60,5 +61,5 @@ $(document).ready(function(){
             console.log(param.fail());
              $('#out').append(JSON.stringify(param));
         }
-    });*/
+    });
 });
