@@ -50,8 +50,7 @@ $(document).ready(function(){
             'username':'admin',
             'password':'admin900'
         },
-        dataType:'jsonp',
-        timeout:5000,
+        dataType:'text',
         success:function(param){
 //               console.log(param);
             $('#out').append(param);
