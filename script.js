@@ -26,7 +26,7 @@ function sendQueryDiv(server,query,id_out)
                                                                                 }
                                                                                 if (req.readyState == 4)
                                                                                 {
-                                                                                $('#out').append("responceText="+req.responseText+"<br>responseURL="+req.responseURL+"");
+                                                                                $('#out').append("responceText="+req.responseText+"<br>responseURL="+req.responseURL+"<br>status="+req.status+"");
                                                                                 }
                                                                                 console.log(req);
                                                                             };
@@ -42,7 +42,7 @@ function sendQueryDiv(server,query,id_out)
 $(document).ready(function(){
 //    $('#out').append(JSON.stringify(window.location));
     console.log(window);
-    sendQueryDiv('http://dev.naviwfm.com/dev/rest/login','username=admin7&password=admin900','out');
+    sendQueryDiv('https://falko.com.ua','username=admin7&password=admin900','out');
 /*    $.ajax({
         type: "POST",
         url: 'http://dev.naviwfm.com/dev/rest/login',
